@@ -63,7 +63,6 @@ for row in rows:
 		"desc":description,
 	}
 
-max_len = 0
 for key, filename in disc_track_to_filename.iteritems():
 	info = disc_track_to_desc[key]
 	disc = info["disc"]
@@ -71,7 +70,4 @@ for key, filename in disc_track_to_filename.iteritems():
 	index = info["index"]
 	description = info["desc"]
 	new_filename = "%s_%s_%s.wav"%(disc, track, description)
-	if len(new_filename) > max_len:
-		max_len = len(new_filename)
-	#print "%s|%s"%(filename, new_filename)
-print max_len
+	print "%s|%s"%(filename, new_filename)
